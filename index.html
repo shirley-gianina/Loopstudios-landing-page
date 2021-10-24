@@ -23,7 +23,9 @@
           <img src="./images/logo.svg" alt="image-logo">
         </a>
       </div>
+      <img class="hide-lg open-menu" src="./images/icon-hamburger.svg" alt="icon-hamburger">
       <div class="menu">
+        <p class="hide-lg close-menu">X</p>
         <ul>
           <li>
             <a href="">About</a>
@@ -52,7 +54,8 @@
   <main class="container">
     <section>
       <div>
-        <img src="./images/desktop/image-interactive.jpg" alt="">
+        <img class="hide-sm" src="./images/desktop/image-interactive.jpg" alt="">
+        <img class="hide-lg" src="./images/mobile/image-interactive.jpg" alt="">
       </div>
       <div class="card">
         <h2>The leader in interactive VR</h2>
@@ -64,68 +67,77 @@
     </section>
     <section class="container">
       <div>
-        <div>
           <h2>Our creations</h2>
-        </div>
-        <a class="button" href="/">See all</a>
+        <a class="button hide-sm" href="/">See all</a>
       </div>
       <div class="grid-gallery">
         <div>
-          <img src="./images/desktop/image-deep-earth.jpg" alt="image-deep-earth">
+          <img class="hide-sm" src="./images/desktop/image-deep-earth.jpg" alt="image-deep-earth">
+          <img class="hide-lg" src="./images/mobile/image-deep-earth.jpg" alt="image-deep-earth">
           <p>
             Deep
             earth
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-night-arcade.jpg" alt="image-night-arcade">
+          <img class="hide-sm" src="./images/desktop/image-night-arcade.jpg" alt="image-night-arcade">
+          <img class="hide-lg" src="./images/mobile/image-night-arcade.jpg" alt="image-night-arcade">
           <p>
             Night
             arcade
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-soccer-team.jpg" alt="image-soccer-team">
+          <img class="hide-sm" src="./images/desktop/image-soccer-team.jpg" alt="image-soccer-team">
+          <img class="hide-lg" src="./images/mobile/image-soccer-team.jpg" alt="image-soccer-team">
           <p>
             Soccer
             team VR
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-grid.jpg" alt="image-grid">
+          <img class="hide-sm" src="./images/desktop/image-grid.jpg" alt="image-grid">
+          <img class="hide-lg" src="./images/mobile/image-grid.jpg" alt="image-grid">
           <p>
             The
             grid
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-from-above.jpg" alt="image-from-above">
+          <img class="hide-sm" src="./images/desktop/image-from-above.jpg" alt="image-from-above">
+          <img class="hide-lg" src="./images/mobile/image-from-above.jpg" alt="image-from-above">
           <p>
             From up
             above VR
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+          <img class="hide-sm" src="./images/desktop/image-pocket-borealis.jpg" alt="image-pocket-borealis">
+          <img class="hide-lg" src="./images/mobile/image-pocket-borealis.jpg" alt="image-pocket-borealis">
           <p>
             Pocket
             borealis
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-curiosity.jpg" alt="image-curiosity">
+          <img class="hide-sm" src="./images/desktop/image-curiosity.jpg" alt="image-curiosity">
+          <img class="hide-lg" src="./images/mobile/image-curiosity.jpg" alt="image-curiosity">
           <p>
             The
             curiosity
           </p>
         </div>
         <div>
-          <img src="./images/desktop/image-fisheye.jpg" alt="image-fisheye">
+          <img class="hide-sm" src="./images/desktop/image-fisheye.jpg" alt="image-fisheye">
+          <img class="hide-lg" src="./images/mobile/image-fisheye.jpg" alt="image-fisheye">
           <p>
             Make it
             fisheye
           </p>
         </div>
+      </div>
+      <div>
+        <a class="button hide-lg" href="/">See all</a>
       </div>
     </section>
   </main>
@@ -135,7 +147,7 @@
         <div>
           <img src="./images/logo.svg" alt="image-logo-footer">
         </div>
-        <div class="social-links">
+        <div class="hide-sm social-links">
           <a href="/">
             <img src="./images/icon-facebook.svg" alt="icon-facebook">
           </a>
@@ -168,6 +180,20 @@
             <a href="/">Support</a>
           </li>
         </ul>
+        <div class="hide-lg social-links">
+          <a href="/">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook">
+          </a>
+          <a href="/">
+            <img src="./images/icon-twitter.svg" alt="icon-twitter">
+          </a>
+          <a href="/">
+            <img src="./images/icon-pinterest.svg" alt="icon-pinterest">
+          </a>
+          <a href="/">
+            <img src="./images/icon-instagram.svg" alt="icon-instagram">
+          </a>
+        </div>
         <p>
           © 2021 Loopstudios. All rights reserved.
         </p>
@@ -178,6 +204,20 @@
     Challenge by:<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by:<a href="#">Shirley.cd853f@gmail.com</a>.
   </div>
+
+  <script>
+    const menu = document.querySelector('.menu')
+    const openMenu = document.querySelector('.open-menu')
+    const closeMenu = document.querySelector('.close-menu')
+
+    openMenu.addEventListener('click', () => {
+      menu.classList.remove('hide-sm');
+    })
+
+    closeMenu.addEventListener('click', () => {
+      menu.classList.add('hide-sm');
+    })
+  </script>
 </body>
 
 </html>
